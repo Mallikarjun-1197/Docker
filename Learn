@@ -1,0 +1,9 @@
+What if you can package your application with all its dependencies and call it a budle and run it anywhere ( in any machine / host ) ? Docker helps with this. It helps to provide a consistent behaviour 
+of our application across environments.
+
+Concept of Virtual machine vs docker : 
+  Before jumping into this.. 
+      An operating system is made of 2 slabs (well there are many underhood), OS kernel and Application Layer.. OS kernel receives instructions from app layer and orchestrates the hardware of the 
+      machine( memory, cpu ). If you run a cal app your code compiles down to a binary and kernal takes it as input to provide memory etc..
+  With above in place , virtual machines virtualizes the entire OS meaning it creates a space on your machine which has its own os kernel and app layer.. while docker only virtualizes the app layer,
+  and uses the machine host ( kernel ). which is why a VM takes some time to start since it has to start its kernel and also consumes more space since it brings its own OS.
