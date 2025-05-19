@@ -7,3 +7,12 @@ Concept of Virtual machine vs docker :
       machine( memory, cpu ). If you run a cal app your code compiles down to a binary and kernal takes it as input to provide memory etc..
   With above in place , virtual machines virtualizes the entire OS meaning it creates a space on your machine which has its own os kernel and app layer.. while docker only virtualizes the app layer,
   and uses the machine host ( kernel ). which is why a VM takes some time to start since it has to start its kernel and also consumes more space since it brings its own OS.
+
+This also means, a VM can run on any host because it brings its own host, while Docker can only run on Linux host ( that is how its developed :) )
+
+So for Docker to run on any non-linux host, devs brought in Docker-Desktop which acts a bridge btwn host OS and docker run time and provides
+all necessary instances to provide its services.
+
+With this , for any app that we want to "dockerize". we are responsible of getting all the necessary environments and package it as an "Image"
+Ex : To run a dot net app, we need a dotnet runtime, restore dlls, build the project, get the dll , run the dll ..etc ..
+If we can package all above we can then run our app on any host having docker installed !
